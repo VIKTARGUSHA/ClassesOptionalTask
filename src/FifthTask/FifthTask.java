@@ -1,5 +1,8 @@
+package FifthTask;
+
 import java.util.*;
 public class FifthTask {
+
     public static void main(String[] args) {
         ArrayList<Integer> listFigures = new ArrayList<>();
         for (int i = 0; i < 10; i++) {
