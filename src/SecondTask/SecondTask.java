@@ -1,4 +1,4 @@
-
+package SecondTask;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -7,11 +7,10 @@ import java.util.Stack;
 
 public class SecondTask {
 
-  public String toString(ArrayList<Integer> ar){
-      ArrayList<String> sar = new ArrayList<>();
-       ar.forEach(o -> sar.add(String.valueOf(o)));
-       return sar.forEach(s -> s);
-  }
+    private void printAr(ArrayList<Integer> ar){
+      ar.forEach(i -> System.out.print(String.valueOf(i)));
+    }
+
     public static void main(String[] args) {
         ArrayList<Integer> ar = new ArrayList<>();
 
@@ -26,9 +25,9 @@ public class SecondTask {
         while (!st.isEmpty()){
             ar.add(st.pop());
         }
-
-
         Collections.reverse(ar);
         System.out.println((ar));
+        SecondTask secondTask = new SecondTask();
+        secondTask.printAr(ar);
     }
 }
