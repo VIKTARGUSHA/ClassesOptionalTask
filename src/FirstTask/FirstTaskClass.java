@@ -1,4 +1,4 @@
-package FiratTask;
+package FirstTask;
 
 import java.io.FileReader;
 import java.io.FileWriter;
