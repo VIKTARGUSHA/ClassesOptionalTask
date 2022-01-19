@@ -1,8 +1,10 @@
+package SevenTask;
+
 import java.util.Scanner;
 import java.util.Stack;
 
 public class SevenTask {
-    public static boolean bracketsCheck(Character[] charList) {
+    public static String bracketsCheck(Character[] charList) {
         if(charList.length == 0){
             throw new IllegalArgumentException();
         }
@@ -12,24 +14,23 @@ public class SevenTask {
                 accuratness.push(c);
             }
             if (c == ')') {
-                if (accuratness.pop() != '(' || accuratness.isEmpty()) {
-                    return false;
+                if (accuratness.isEmpty() || accuratness.pop() != '(') {
+                    return "  ) false";
                 }
             }
                 if (c == ']') {
-                    if (accuratness.pop() != '[' || accuratness.isEmpty()) {
-                        return false;
+                    if (accuratness.isEmpty() || accuratness.pop() != '[')  {
+                        return "  ] false";
                     }
                 }
                     if (c == '}') {
-                        if (accuratness.pop() != '{' || accuratness.isEmpty()) {
-                            return false;
+                       if (accuratness.isEmpty() || accuratness.pop() != '{') {
+                            return "  }false";
                         }
             }
         }
-        return true;
+        return "False number Breckits";
     }
-
     public static void main(String[] args) throws Exception{
 
         Scanner sc = new Scanner(System.in);
